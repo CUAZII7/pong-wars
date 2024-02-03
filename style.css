@@ -34,8 +34,13 @@ body {
     overflow: hidden;
     width: 100%;
     margin-top: auto;
-    box-shadow: 0 0 20px rgba(126, 126, 126, 0.2);
+    box-shadow: 0 0 20px rgba(126, 126, 126, 0.2); 
+    animation: fadein 1.5s ease-out forwards; 
 }
+
+/* #score,#bestScore,#ButtonsContainer{
+    animation: fadein-Down 3s ease-out forwards;
+} */
   
 /* スコアのスタイル設定 */
 #score {
@@ -44,6 +49,7 @@ body {
     font-size: 13px;
     /* padding-left: 20px; */
     color: #ffffff;
+    animation: fadein-Down 1s ease-out forwards;
 }
   
 /* スコアのスタイル設定 */
@@ -54,11 +60,13 @@ body {
     font-size: 13px;
     /* padding-left: 20px; */
     color: #ffffff;
+    animation: fadein-Down 1.5s ease-out forwards;
 }
   
 #buttonsContainer{
     font-family: monospace;
     margin-top: 20px;
+    animation: fadein-Down 2s ease-out forwards;
 }
 .numberButton{
     align-items: center;
@@ -88,4 +96,20 @@ body {
   
 #made a {
     color: #ffffff;
+}
+
+@keyframes fadein {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@keyframes fadein-Down {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
 }
