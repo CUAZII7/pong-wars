@@ -6,10 +6,10 @@ function goToPage(page) {
 //定数
 // カラーパレットの定義
 const colorPalette = {
-    Blue: "#D9EDBF",
-    Pink: "#FFB996",
-    Orange: "#FFCF81",
-    Yellow: "#FDFFAB"
+    Blue: "#4a99bb",
+    Red: "#e03d44",
+    Green: "#59bb89",
+    Yellow: "#ffab00"
 };
 const canvas = document.getElementById("pongCanvas");
 const ctx = canvas.getContext("2d");
@@ -32,16 +32,16 @@ switch(scriptSource){
 
 //ボール1
 const B1_COLOR = colorPalette.Blue;
-const B1_BALL_COLOR = colorPalette.Pink;
+const B1_BALL_COLOR = colorPalette.Green;
 //ボール2
-const B2_COLOR = colorPalette.Pink;
-const B2_BALL_COLOR = colorPalette.Blue;
+const B2_COLOR = colorPalette.Red;
+const B2_BALL_COLOR = colorPalette.Yellow;
 //ボール3
-const B3_COLOR = colorPalette.Orange;
-const B3_BALL_COLOR = colorPalette.Yellow;
+const B3_COLOR = colorPalette.Green;
+const B3_BALL_COLOR = colorPalette.Blue;
 //ボール4
 const B4_COLOR = colorPalette.Yellow;
-const B4_BALL_COLOR = colorPalette.Orange;
+const B4_BALL_COLOR = colorPalette.Red;
 // ボールとスクエアのサイズの設定
 const SQUARE_SIZE = 25;
 const numSquaresX = canvas.width / SQUARE_SIZE;
@@ -185,7 +185,7 @@ function updateScoreElement() {
         bestPlayer = "YELLOW";
     }
 
-    scoreElement.textContent = `BRUE:${B1Score} PINK:${B2Score} ORANGE:${B3Score} YELLOW:${B4Score}`;
+    scoreElement.textContent = `BRUE:${B1Score} RED:${B2Score} GREEN:${B3Score} YELLOW:${B4Score}`;
 
     // ベストスコアの表示を更新
     updateBestScoreElement();
@@ -194,7 +194,7 @@ function updateScoreElement() {
 
 function updateBestScoreElement() {
     // ベストスコアの表示を更新
-    bestScoreElement.textContent = `HIGH SCORE : ${bestPlayer} [${bestScore}]`;
+    bestScoreElement.textContent = `HIGH SCORE : ${bestPlayer} ${bestScore}`;
 }
 
 function checkBoundaryCollision(x, y, dx, dy) {
