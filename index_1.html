@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>pong-wars-4-territory</title>
+    <meta name="description" />
+    <link rel="canonical" href="https://pong-wars.koenvangilst.nl/" />
+    <link rel="author" href="https://koenvangilst.nl" />
+    <meta name="theme-color" content="#172B36" />
+    <meta name="creator" content="Koen van Gilst" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="container">
+        <canvas id="pongCanvas" width="1000" height="1000"></canvas>
+        <div id="score"></div>
+        <div id="bestScore"></div>
+        <!-- ボタンを配置するコンテナ -->
+        <div id="buttonsContainer">
+            <!-- 1から10までのボタンを生成 -->
+            <!-- ボタンにはクリック時に任意の処理を追加できます -->
+            <!-- この例ではボタンをクリックしたときにalertで番号を表示する処理を追加しています -->
+            <button class="numberButton" onclick="goToPage('index_1.html')">1</button>
+            <button class="numberButton" onclick="goToPage('index_2.html')">2</button>
+            <button class="numberButton" onclick="goToPage('index_3.html')">3</button>
+            <button class="numberButton" onclick="goToPage('index_4.html')">4</button>
+            <button class="numberButton" onclick="goToPage('index.html')">5</button>
+            <button class="numberButton" onclick="goToPage('index_6.html')">6</button>
+            <button class="numberButton" onclick="goToPage('index_7.html')">7</button>
+            <button class="numberButton" onclick="goToPage('index_8.html')">8</button>
+            <button class="numberButton" onclick="goToPage('index_9.html')">9</button>
+        </div>
+        <p id="made">
+            made by CUAZII | source on <a href="https://koenvangilst.nl">Koen van Gilst</a>
+        <a href="https://github.com/vnglst/pong-wars">github</a>
+        </p>
+    </div>
+    <script src="script.js?source=1"></script>
+</body>
+</html>
